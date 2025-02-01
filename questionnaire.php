@@ -139,7 +139,7 @@
         <div id="title">
             <h1 id="title" id="top">Minecraft Questionnaire</h1>
             <h1 id="subtitle">Minecraft 问卷</h1>
-            <a href="homepage.html" id="back">返回Minecraft Wiki首页</a>
+            <a href="index.html" id="back">返回Minecraft Wiki首页</a>
             <br>
             <br>
             <marquee behavior="scroll" direction="left" scrollamount="5">
