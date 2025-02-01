@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft 地形</title>
+    <link rel="icon" type="image/x-icon" href="images/icon/link.png">
+    <style>
+        @font-face {
+            font-family: "minecraft_font";
+            src: url(font/minecraft_font.ttf);
+            }
+        html {
+        scroll-behavior: smooth;
+        }
+        body {
+            background:url(images/background/background1.jpg);
+            background-repeat:no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            font-family: "minecraft_font";
+            word-wrap: break-word;
+        }
+        div[id="home"] {
+            width: 70%;
+            flex-wrap: 1;
+            border: 50px solid transparent;
+            border-image: url(images/background/book.png) 100 fill;
+            background-repeat: no-repeat;
+            background-size: contain;
+            image-rendering: pixelated;
+            margin: 0px auto;
+        }
+        div[id="content"] {
+            position: relative;
+            width: 80%;
+            top: 50px;
+            margin: 0 auto;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 50px solid transparent;
+            border-image: url(images/background/background.png) 60 fill;
+            color: white;
+        }
+        div[id="title"] {
+            text-align: center;
+        }
+        h1[id="title"] {
+            position: relative;
+            top: 10px;
+            font-size: 50px;
+        }
+        h1[id="subtitle"] {
+            position: relative;
+            top: 10px;
+            font-size: 20px;
+        }
+        div[id="img"] {
+            text-align: center;
+        }
+        hr[id="1"] {
+            background-color: black;
+            width: 100%;
+            height: 3px;
+            border: none;
+        }
+        hr[id="2"] {
+            background-color: black;
+            width: 100%;
+            height: 2px;
+            border: none;
+        }
+        hr[id="3"] {
+            background-color: black;
+            width: 100%;
+            height: 1px;
+            border: none;
+        }
+        h2 {
+            font-size: 25px;
+        }
+        h3[id="title"] {
+            font-size: 30px;
+        }
+        img {
+            width: 50%;
+            height: auto;
+        }
+        p {
+            font-size: 17px;
+            line-height: 1.5;
+        }
+        span {
+            white-space: pre;
+        }
+        #footer {
+            margin: 40px;
+            padding-top: 200px;
+            background: url(images/title/Minecraft_Wiki_header.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            position: relative;
+        }
+        a{
+            text-decoration: none;
+            color:rgb(255, 255, 255, 0.8);
+            transition: color 0.3s ease;
+            transition:transform 0.3s ease;
+            font-weight: bold;
+        }
+        a:hover{
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+        li{
+            transition: transform 0.3s ease;
+        }
+        li:hover{
+            transform: scale(1.1);
+        }
+        #back{
+            width: 300px;
+            height: 30px;
+            background-image: url(images/icon/button.png);
+            background-size: 100% 100%;
+            border-color: rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+            margin: 0 20px;
+            background-repeat: no-repeat;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            position: relative;
+            top:20px;
+            margin: 0 auto;
+        }
+        #back:hover{
+            background-image: url(images/icon/button_highlighted.png);
+            background-size: 100% 100%;
+        }
+        ul{
+            list-style: none;
+            float: left;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <div id="home">
+        <div id="title">
+            <h1 id="title" id="top">Minecraft Terrains</h1>
+            <h1 id="subtitle">Minecraft 地形</h1>
+            <a href="homepage.html" id="back">返回Minecraft Wiki首页</a>
+            <br>
+            <br>
+            <marquee behavior="scroll" direction="left" scrollamount="5">
+                本站并未完全搭建好处于测试阶段，部分功能不可用，敬请谅解！
+            </marquee>
+        </div>
+        <div id="content">
+            <hr id="1">
+            <h2 id="menu">主世界（World）<span>                             </span>下届（The Nether）<span>             </span>末地（The End）</h2>
+            <hr id="2">
+            <div id="world">                                                                                                                                                        
+                <ul style="position: relative; right: 40px;">
+                    <li>
+                        <a href="#mountain">山脉（Mountains）</a>
+                    </li>
+                    <li>
+                        <a href="#floatingisland">浮岛（Floating Island）</a>
+                    </li>
+                    <li>
+                        <a href="#hollow">空洞（Hollow）</a>
+                    </li>
+                    <li>
+                        <a href="#hill">丘陵（Hill）</a>
+                    <li>
+                        <a href="#surface">地表（Surface Layer）</a>
+                    </li>
+                    <li>
+                        <a href="#basin">盆地（Basin）</a>
+                    </li>
+                    <li>
+                        <a href="#hoodoo">岩柱（Bryce Pillar或Hoodoo）</a>
+                    </li>
+                    <li>
+                        <a href="#iceberg">冰山（Iceberg）</a>
+                    </li>
+                    <li>
+                        <a href="#aquifer">含水层（Aquifer）</a>
+                    </li>
+                    <li>
+                        <a href="#cavern">洞穴（Cave/Cavern）</a>
+                    </li>
+                    <li>
+                        <a href="#canyon">峡谷（Canyon或Ravine）</a>
+                    </li>
+                    <li>
+                        <a href="#orevein">矿脉（Ore Vein）</a>
+                    </li>
+                </ul>
+                <ul style="position: relative; left: 40px;">
+                    <li>
+                        <a href="#lavasea">熔岩海（Lava Sea）</a>
+                    </li>
+                    <li>
+                        <a href="#netherbasin">下届盆地（Nether Basin）</a>
+                    </li>
+                </ul>
+                <ul style="position: relative; left: 130px;">
+                    <li>
+                        <a href="#endcentralisland">中心岛屿（End Central Island）</a>
+                    <li>
+                        <a href="#endnetherisland">外部岛屿（End Nether Island）</a>
+                    </li>
+                    <li>
+                        <a href="#endbasin">末地盆地（End basin）</a>
+                    </li>
+                </ul>
+                <div id="mountain">
+                    <hr id="3">
+                    <h3 id="title">山脉（Mountains）<a href="#world">返回主世界</a></h3>
+                    <hr id="3">
+                    <p id="mountain"><strong>山脉（Mountain）</strong>是具有陡峭的山的地形。有时，一些洞穴会穿过山脉。在放大化世界中，山脉是极其常见的（除了在海洋和沼泽生物群系）。</p>
+                    <div id="img">
+                        <img src="images/world/mountain/Floatingisland.webp" alt="mountain" title="山脉">
+                        <p>一个突出、悬空的巨型结构，常出现在极高的山脉上</p>
+                        <img src="images/world/mountain/OverhangMountain.webp" alt="悬崖山地" title="悬崖山地">
+                        <p>一个风袭丘陵生物群系</p>
+                        <img src="images/world/mountain/Floatingisland.webp" alt="浮岛" title="浮岛">
+                        <p>山脉上悬崖与浮岛</p>
+                    </div>
+                </div>
+                <div id="floatingisland">
+                    <hr id="3">
+                    <h3 id="title">浮岛（Floating Island）<a href="#world">返回主世界</a></h3>
+                    <hr id="3">
+                    <p id="mountain"><strong>浮岛（Floating Island）</strong>是一种飘浮在空中，不与地面、海洋、山脉和悬崖连接的结构。浮岛通常只是在悬崖附近的随机泥土和石头，但在极其
+    罕见的情况下，它们会非常巨大，以至于飘浮在半空中，甚至有涌泉和树木在上面。浮岛通常能在风袭丘陵、雪原、山地和蘑菇岛生物群系被发现，
+    但其实在任何地方都有可能生成，尤其是在风袭热带草原生物群系中。</p>
+                    <div id="img">
+                        <img src="images/world/floatingisland/Floating_Land.png" alt="浮岛" title="浮岛">
+                        <p>一个小浮岛</p>
+                        <img src="images/world/floatingisland/LargeFloatingIsland.png" alt="巨型浮岛" title="巨型浮岛">
+                        <p>自然生成的浮岛</p>
+                        <img src="images/world/floatingisland/Minecraft_floating_island.png" alt="Minecraft浮岛" title="Minecraft浮岛">
+                        <p>另一个浮岛</p>
+                        <img src="images/world/floatingisland/Small_floating_island.png" alt="小型浮岛" title="小型浮岛">
+                        <p>小而高的浮岛，有水流下</p>
+                    </div>
+                </div>
+                <div id="hollow">
+                    <hr id="3">
+                    <h3 id="title">空洞（Hollow）<a href="#world">返回主世界</a></h3>
+                    <hr id="3">
+                    <p id="mountain"><strong>空洞（Hollow）</strong>与浮岛相反。它们看起来像洞穴，但与洞穴生成无关（尽管它们可能与洞穴交叉）。当有许多悬崖时，它们会靠在一起并创造出一个空洞。它们的高度与地形一致，这取决于它们所在的生物群系，而不像洞穴那样。洞穴没有特定的高度。有趣的是，即使没有光，草方块也可以在空洞中生成。当空洞生成在低于海平面的高度上时，它们会被水填充。空洞在主世界中非常罕见，但在自定义世界中很常见。</p>
+                    <div id="img">
+                        <img src="images/world/hollow/Hollow_2.webp" alt="浮岛" title="浮岛">
+                        <p>默认世界的一个空洞（火把由玩家放置）</p>
+                        <img src="images/world/hollow/Hollow_1.png" alt="巨型浮岛" title="巨型浮岛">
+                        <p>另一个连接着洞穴的空洞</p>
+                    </div>
+                </div>
+                <div id="hill">
+                    <hr id="3">
+                    <h3 id="title">丘陵（Hill）<a href="#world">返回主世界</a></h3>
+                    <hr id="3">
+                    <p id="mountain"><strong>丘陵（Hill）</strong>是地图中陆地上随机产生的地形。像楼梯一样，丘陵不会很陡峭，每层总是会有地方可以登上更高一层，这意味着玩家可以一层一层爬上山顶而不必借助任何工具。不能徒步爬上的丘陵是很稀有的。</p>
+                    <div id="img">
+                        <img src="images/world/hill/SmallForestHill.png" alt="小型丘陵" title="小型丘陵">
+                        <p>一个长着树木和草丛的随机生成的丘陵</p>
+                    </div>
+                </div>
+                <div id="surface">
+                    <hr id="3">
+                    <h3 id="title">地表（Surface Layer）<a href="#world">返回主世界</a></h3>
+                    <hr id="3">
+                    <p id="mountain"><strong>地表（Surface Layer）</strong>的最顶层会依据生物群系被转换成其他方块，通常是草和泥土，或者是沙漠、沙滩上的沙子。灰化土通常存在于原始针叶林地表，菌丝体通常在蘑菇岛生物群系上，红沙则是在恶地生物群系上。砂岩通常垫于沙子层之下。</p>
+                    <div id="img">
+                        <img src="images/world/hill/SmallForestHill.png" alt="小型丘陵" title="小型丘陵">
+                        <p>一个长着树木和草丛的随机生成的丘陵</p>
+                    </div>
+                </div>
+                <div id="basin">
+                    <hr id="3">
+                    <h3 id="title">盆地（Basin）<a href="#world">返回主世界</a></h3>
+                    <hr id="3">
+                    <p id="mountain">有的时候，地形的表面不会被转换成其他方块，而是被直接移除，留下石头裸露的<strong>盆地（Basin）</strong>。游戏中的盆地与地理学上的“地盾”（构造稳定的岩石地区，由于其非常古老的原因而长期遭受侵蚀，与地质术语“盆地”有所不同）有一些相似之处。它们更多地在森林和平原中生成，偶尔被水淹没，玩家可以在其中发现矿石（通常为煤矿石和铁矿石）。如果这个地形生成在恶地生物群系中，也可以在其中发现金矿石。</p>
+                    <div id="img">
+                        <img src="images/world/basin/Biomes_Basin.png" alt="自然小盆地" title="自然小盆地">
+                        <p>自然生成的盆地地形</p>
+                        <img src="images/world/basin/Desert_basin.png" alt="沙漠小盆地" title="沙漠小盆地">
+                        <p>一个沙漠盆地</p>
+                        <img src="images/world/basin/Taiga_basin.png" alt="针叶林盆地" title="针叶林盆地">
+                        <p>一个针叶林盆地</p>
+                        <img src="images/world/basin/Tundra_basin.png" alt="积雪盆地" title="积雪盆地">
+                        <p>积雪的盆地</p>
+                        <img src="images/world/basin/Big_basin.webp" alt="巨型盆地" title="巨型盆地">
+                        <p>一块生成在平原的大盆地</p>
+                    </div>
+                </div>
+                <div id="strip">
+                    <hr id="3">
+                    <h3 id="title">条带（Strip）<a href="#world">返回主世界</a></h3>
+                    <hr id="3">
+                    <p id="mountain"><strong>条带（Strip）</strong>是由同种方块组成的不规则蛇形结构，它们会替换掉一些生物群系中的地表方块。</p>
+                    <div id="img">
+                        <img src="images/world/strip/Calcite_Strips.png" alt="方解石条带" title="方解石条带">
+                        <p>裸岩山峰上的方解石条带</p>
+                    </div>
+                </div>
+                <div id="hoodoo">
+                    <hr id="3">
+                    <h3 id="title">岩柱（Bryce Pillar或Hoodoo）<a href="#world">返回主世界</a></h3>
+                    <hr id="3">
+                    <p id="mountain"><strong>岩柱（Bryce Pillar或Hoodoo）</strong>是生成在恶地生物群系里的刺状的结构，由6种颜色的陶瓦组成。尽管这种地形只能在风蚀恶地里找到，事实上所有的恶地生物群系都有这种结构，只是被设为false，除了风蚀恶地。这种结构从地面突出，有时能超过海拔100层。</p>
+                    <div id="img">
+                        <img src="images/world/hoodoo/Bryce_Pillars_Eroded_Mesa.png" alt="岩柱" title="岩柱">
+                        <p>风蚀恶地里的岩柱</p>
+                        <img src="images/world/hoodoo/Mesa_bryce.png" alt="岩柱" title="岩柱">
+                        <p>旧版本里的岩柱</p>
+                    </div>
+                </div>
+                <div id="iceberg">
+                    <hr id="3">
+                    <h3 id="title">冰山（Iceberg）<a href="#world">返回主世界</a></h3>
+                    <hr id="3">
+                    <p id="mountain"><strong>冰山（Iceberg）</strong>是生成在冻洋和冰冻深海生物群系海面上由浮冰与雪组成的地形特征。冰山拥有十分迥异的形状和尺寸，小到“微岛”，大到山脉。它们亦会生成“洞穴”一样的洞，这些洞可能贯穿整座冰山。与冰山地物不同，冰山地形特征不会生成蓝冰。</p>
+                    <div id="img">
+                        <img src="images/world/iceberg/Icebergs_biome.jpg" alt="冰山" title="冰山">
+                        <p>第一张冰山的截图</p>
+                        <img src="images/world/iceberg/Iceberg-18w15a.png" alt="自然生成的冰山" title="自然生成的冰山">
+                        <p>一座自然生成的冰山</p>
+                        <img src="images/world/iceberg/Aerial_frozen_ocean_view.png" alt="有冰山的冻洋" title="有冰山的冻洋">
+                        <p>从空中视角看有冰山的冻洋</p>
+                        <img src="images/world/iceberg/Iceberg_from_below.png" alt="水下冰山" title="水下冰山">
+                        <p>从水下看冰山</p>
+                    </div>
+                </div>
+                <div id="aquifer">
+                    <hr id="3">
+                    <h3 id="title">含水层（Aquifer）<a href="#world">返回主世界</a></h3>
+                    <hr id="3">
+                    <p id="mountain"><strong>含水层（Aquifer）</strong>是采用噪声生成器生成的拥有独立高度的水体，能够在主世界形成水位、大小各异的湖。</p>
+                </div>
+                <div id="cavern">
+                    <hr id="3">
+                    <h3 id="title">洞穴（Cave/Cavern）<a href="#world">返回主世界</a></h3>
+                    <hr id="3">
+                    <p id="mountain"><strong>洞穴（Cave/Cavern）</strong>是一种在主世界地下十分常见的地形特征。下界中也具有一些简单的洞穴。</p>
+                </div>
+                <div id="canyon">
+                    <hr id="3">
+                    <h3 id="title">峡谷（Canyon或Ravine）<a href="#world">返回主世界</a></h3>
+                    <hr id="3">
+                    <p id="mountain"><strong>峡谷（Canyon或Ravine）</strong>是地下高而长的裂缝。在Java版中，峡谷的深度约为27-62格，在基岩版中，峡谷通常能直接延伸至基岩层。峡谷有时会深入海底，形成海沟。</p>
+                    <div id="img">
+                        <img src="images/world/canyon/Multi-ravine_system.png" alt="多峡谷系统" title="多峡谷系统">
+                        <p>在地下连接在一起的两条峡谷</p>
+                        <img src="images/world/canyon/Over_Ravine.png" alt="悬崖峡谷" title="悬崖峡谷">
+                        <p>暴露于天空下的峡谷</p>
+                        <img src="images/world/canyon/Double_ravine_and_river.png" alt="双峡谷和河流" title="双峡谷和河流">
+                        <p>一条被河流生物群系截断的露天峡谷</p>
+                        <img src="images/world/canyon/UnderwaterRavine.png" alt="水下峡谷" title="水下峡谷">
+                        <p>一条水下峡谷</p>
+                        <img src="images/world/canyon/Ravine_with_Mineshaft_in_it.webp" alt="矿井的峡谷" title="矿井的峡谷">
+                        <p>一条暴露了废弃矿井的峡谷</p>
+                    </div>
+                </div>
+                <div id="orevein">
+                    <hr id="3">
+                    <h3 id="title">矿脉（Ore Vein）<a href="#world">返回主世界</a></h3>
+                    <hr id="3">
+                    <p id="mountain"><strong>矿脉（Ore Vein）</strong>是由矿石和岩石构成的罕见大型结构，形状类似于意面洞穴，生成于主世界的地下。矿脉有铁矿脉与铜矿脉两种。铁矿脉在主世界Y=-60到Y=-8的高度伴随凝灰岩生成；铜矿脉在主世界Y=0到Y=50的高度伴随花岗岩生成。粗铁块和粗铜块也有较小的概率在对应的矿脉中生成。</p>
+                    <div id="img">
+                        <img src="images/world/orevein/Iron_and_Copper_Veins.jpg" alt="铁矿脉和铜矿脉" title="铁矿脉和铜矿脉">
+                        <p>铁矿脉（左下）和铜矿脉（右上）</p>
+                        <img src="images/world/orevein/Excavated_Copper_Vein.webp" alt="发掘出的铜矿脉" title="发掘出的铜矿脉">
+                        <p>发掘出的铜矿脉</p>
+                        <img src="images/world/orevein/Discovered_Iron_Vein.webp" alt="发掘出的铁矿脉" title="发掘出的铁矿脉">
+                        <p>发掘出的铜矿脉</p>
+                    </div>
+                </div>
+                <div id="lavasea">
+                    <hr id="3">
+                    <h1>下届（The Nether）</h1>
+                    <h3 id="title">熔岩海（Lava Sea）<a href="#world">返回主世界</a></h3>
+                    <hr id="3">
+                    <p id="mountain"><strong>熔岩海（Lava Sea）</strong>是下界31层以下出现的广阔的熔岩海域。熔岩海十分常见，是下界的主要光源之一。熔岩海可以在四面延伸数百米，海岸一般由下界岩组成，有时候是灵魂沙或岩浆块。</p>
+                    <div id="img">
+                        <img src="images/world/lavasea/Mobs_on_Lava_Sea.webp" alt="两个恶魂在熔岩海上" title="两个恶魂在熔岩海上">
+                        <p>两个恶魂在熔岩海上</p>
+                    </div>
+                </div>
+                <div id="netherbasin">
+                    <hr id="3">
+                    <h3 id="title">下界盆地（Nether Basin）<a href="#world">返回主世界</a></h3>
+                    <hr id="3">
+                    <p id="mountain"><strong>下界盆地（Nether Basin）</strong>的大小和形状与主世界的盆地相同。但不同的是，下界盆地使用下界岩代替地面，而不是石头。下界盆地有时也会暴露出下界石英矿石和下界金矿石。值得注意的是，下界盆地的生成与y坐标无关。两个完全相同的盆地可能会在相同的x和z坐标，不同的y坐标处生成。</p>
+                    <div id="img">
+                        <img src="images/nether/basin/Crimson_Forest_Basin.png" alt="绯红森林的一个盆地" title="绯红森林的一个盆地">
+                        <p>绯红森林的一个盆地，其中含有下界石英矿石</p>
+                        <img src="images/nether/basin/Warped_Forest_Basin.png" alt="诡异森林的一个盆地" title="诡异森林的一个盆地">
+                        <p>诡异森林的一个盆地</p>
+                        <img src="images/nether/basin/Nether_Wastes_Basin.png" alt="下界荒地的一个大盆地" title="下界荒地的一个大盆地">
+                        <p>下界荒地的一个大盆地</p>
+                    </div>
+                </div>
+                <div id="endcentralisland">
+                    <hr id="3">
+                    <h1>末地（The End）</h1>
+                    <h3 id="title">中央岛屿（End Central Island）<a href="#world">返回主世界</a></h3>
+                    <hr id="3">
+                    <p id="mountain"><strong>中央岛屿</strong>是末地的中央是一片行星状的大型岛屿，主要由末地石组成，悬浮在虚空中。</p>
+                    <div id="img">
+                        <img src="images/end/TheEnd.png" alt="只有一只末影人的岛屿" title="只有一只末影人的岛屿">
+                        <p>只有一只末影人的岛屿</p>
+                    </div>
+                </div>
+                <div id="endnetherisland">
+                    <hr id="3">
+                    <h3 id="title">外部岛屿（End Nether Island）<a href="#world">返回主世界</a></h3>
+                    <hr id="3">
+                    <p id="mountain"><strong>外部岛屿（End Nether Island）</strong>距离中央岛屿有大约1000米远，岛屿大小不一。末地城、紫颂树和末地船会生成在此处。玩家可以通过末地折跃门传送到此处。</p>
+                    <div id="img">
+                        <img src="images/end/ChorusFields.png" alt="生长着紫颂树的外部岛屿" title="生长着紫颂树的外部岛屿">
+                        <p>生长着紫颂树的外部岛屿</p>
+                    </div>
+                </div>
+                <div id="endbasin">
+                    <hr id="3">
+                    <h3 id="title">末地盆地（End basin）<a href="#world">返回主世界</a></h3>
+                    <hr id="3">
+                    <p id="mountain">像在主世界和下界那样，<strong>末地盆地（End basin）</strong>会在末地生成。盆地可以在中央岛屿和外部岛屿生成。紫颂树偶尔会植根于盆地中。</p>
+                    <div id="img">
+                        <img src="images/end/End_Central_Island_Basin.png" alt="生成于末地中央岛屿的盆地" title="生成于末地中央岛屿的盆地">
+                        <p>生成于末地中央岛屿的盆地</p>
+                        <img src="images/end/End_Outer_Island_Basin.png" alt="生成于末地中央岛屿的盆地" title="生成于末地中央岛屿的盆地">
+                        <p>末地外部岛屿的大盆地</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br><br>
+        <hr id="2" style="width: 80%;">
+        <h2 style="text-align: center;"><a href="#top" style="color: rgb(134, 134, 134);">回到顶部</a></h2>
+        <footer id="footer"></footer><br>
+        <h1 style="text-align: center;">本站所有内容均摘自<a href="https://zh.minecraft.wiki/" target="_blank" style="color: rgb(134, 134, 134);font-size: 35px;">Minecraft Wiki</a>，仅供学习交流使用，请勿用于商业用途！</h1>
+    </div>
+    <audio src="audio/C418 - Subwoofer Lullaby.mp3" autoplay></audio>
+</body>
+</html>

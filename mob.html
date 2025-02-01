@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft生物</title>
+    <link rel="icon" type="image/x-icon" href="images/icon/link.png">
+    <style>
+        @font-face {
+        font-family: "minecraft_font";
+        src: url(font/minecraft_font.ttf);
+        }
+        body {
+            background:url(images/background/background3.jpg);
+            background-repeat:no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            font-family: "minecraft_font";
+            word-wrap: break-word;
+        }
+        div[id="home"] {
+            width: 65%;
+            flex-grow: 1;
+            border: 50px solid transparent;
+            border-image: url(images/background/book.png) 100 fill;
+            background-repeat: no-repeat;
+            background-size: contain;
+            image-rendering: pixelated;
+            margin: 0px auto;
+            padding-bottom: 50px;
+        }
+        div[id="title"] {
+            text-align: center;
+        }
+        h1[id="title"] {
+            position: relative;
+            top: 10px;
+            font-size: 50px;
+        }
+        h1[id="subtitle"] {
+            position: relative;
+            top: 10px;
+            font-size: 20px;
+        }
+        hr[id="1"] {
+            background-color: black;
+            width: 100%;
+            height: 3px;
+            border: none;
+        }
+        hr[id="2"] {
+            background-color: black;
+            width: 100%;
+            height: 2px;
+            border: none;
+        }
+        hr[id="3"] {
+            background-color: black;
+            width: 100%;
+            height: 1px;
+            border: none;
+        }
+        div[id="content"] {
+            position: relative;
+            width: 80%;
+            top: 50px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 50px solid transparent;
+            border-image: url(images/background/background.png) 60 fill;
+            color: white;
+            margin: 0 auto;
+        }
+        #table {
+            align-items: center; 
+        }
+        strong {
+            white-space: pre-wrap;
+        }
+        #footer {
+            margin: 40px;
+            padding-top: 200px;
+            background: url(images/title/Minecraft_Wiki_header.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            position: relative;
+        }
+        img{
+            transition: transform 0.2s ease;
+        }
+        img:hover{
+            transform:scale(1.5);
+        }
+        #back{
+            width: 300px;
+            height: 30px;
+            background-image: url(images/icon/button.png);
+            background-size: 100% 100%;
+            border-color: rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+            margin: 0 20px;
+            background-repeat: no-repeat;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            position: relative;
+            margin: 0 auto;
+            top:20px
+        }
+        #back:hover{
+            background-image: url(images/icon/button_highlighted.png);
+            background-size: 100% 100%;
+        }
+        a{
+            transition: transform 0.3s ease;
+        }
+        a:hover{
+            transform: scale(1.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="home">
+        <div id="title">
+            <h1 id="title" id="top">Minecraft Mob</h1>
+            <h1 id="subtitle">Minecraft 生物</h1>
+            <a href="homepage.html" id="back">返回Minecraft Wiki首页</a>
+            <br>
+            <br>
+            <marquee behavior="scroll" direction="left" scrollamount="5">
+                本站并未完全搭建好处于测试阶段，部分功能不可用，敬请谅解！
+            </marquee>
+        </div>
+        <div id="content">
+            <h2>生物（Mob）</h2>
+            <p><strong>生物（Mob）</strong>是指游戏世界中有生命的、可自主移动的一类实体。术语“Mob”是“Mobile Entity（可移动的实体）”的简写。
+            </p>
+            <h2>生成（Summon）</h2>
+            <p>生物存在是因为多种原因的生成。许多生物会自然地生成，但依赖于光照等级、生物群系以及它们的环境。生物一般以相同种类成群地生成。这些生物总是会在初次区块创建时生成。许多友好生物可以繁殖，除非它们是幼年的。生物一般不会自然生成于上表面不完整的方块、水里及熔岩中，但水生生物可以在水下生成，炽足兽会生成在熔岩表面。刷怪笼是个例外，它可以让生物自然地生成于任何地方（包括空气）。
+
+                某些生物（像雪傀儡和凋灵）在生成之前需要玩家“构建”它们。铁傀儡既可自然生成也可由玩家构建或使用刷怪蛋生成。
+                
+                玩家也可以使用刷怪蛋，或者在允许作弊的情况下，使用/summon命令召唤生物。
+            </p>
+            <h2>行为（Behavior）</h2>
+            <p>生物适用许多非生物实体不具有的游戏机制，包括受击后伤害免疫、状态效果、属性、着火时间、呼吸等。生物死亡时还会产生倒下并冒出烟雾的动画效果。
+
+                Minecraft里大多数生物皆有特定的AI（人工智能）系统，拥有不同的行为和力学。如果生物附近有玩家，生物通常会随机游荡，并且通常会避免走到很高的方块而导致摔落。许多生物都有一个先进的寻路系统，使它们经由复杂的路径到达要去的地点。
+                
+                大多数生物都会察觉到在半径16格方块内的其他生物，但有些可以看得更远。大多数生物可以被16个方块以外的玩家听到。
+                
+                绝大多数生物的视线无法穿过大多数固体方块，包括半透明方块，如冰、玻璃或玻璃板。在Java版中，除了玩家和监守者以外的所有生物都不会试图在铁轨上行走，除非被其他生物推着。
+            </p>
+            <h2>生物列表</h2>
+            <h4>下面列出并依照其性质分类的生物。该列表中的“友好生物”和“敌对生物”类别根据Java版中生物对攻击目标的选择方式进行分类。</h4>
+            <table border="1" style="text-align: center;">
+                <tr>
+                    <td>
+                        <h4>玩家</h4>
+                    </td>
+                    <td>
+                        <p style="white-space: pre-wrap;">玩家是可以控制的生物。作为一种生物，能够影响生物的多种状态和效果也能够影响玩家。                                                    </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/玩家" target="_blank"><img src="images/minecraft/table/PlayerSteveFace.webp" alt="玩家" title="玩家"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><strong>玩家（Steve）</strong></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>
+                            友好生物
+                        </h4>
+                    </td>
+                    <td>
+                        友好生物是不会主动攻击玩家的生物，这些生物不会因难度设置而被清除。
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>无生物AI</h4>
+                    </td>
+                    <td>
+                        盔甲架是一种不具有生物AI而不会行动的生物，但大多数影响生物的效果会影响盔甲架。
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/盔甲架" target="_blank"><img src="images/minecraft/table/ArmorStandFace.webp" alt="盔甲架" title="盔甲架"></a>
+                    </td>
+                    <tr>
+                        <td>
+                            <p><strong style="white-space: pre-wrap;">盔甲架
+（Armor Stand）</strong></p>
+                        </td>
+                    </tr>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>无攻击行为，无伤害能力</h4>
+                    </td>
+                    <td>
+                        <p style="white-space: pre-wrap;">以下生物没有任何造成伤害的能力，其中的许多生物受到伤害时会惊慌逃窜。
+（在Java版中，兔子有未使用的近战攻击能力）</p>
+                    </td>
+                </tr>
+            </table>
+            <table border="1" style="text-align: center;table-layout: fixed;width: 100%;">  
+                <tr>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/悦灵" target="_blank"><img src="images/minecraft/table/AllayFace.webp" alt="悦灵" title="悦灵"></a>
+                    </td>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/犰狳" target="_blank"><img src="images/minecraft/table/ArmadilloFace.webp" alt="犰狳" title="犰狳"></a>
+                    </td>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/蝙蝠" target="_blank"><img src="images/minecraft/table/BatFace.webp" alt="蝙蝠" title="蝙蝠 "></a>
+                    </td>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/骆驼" target="_blank"><img src="images/minecraft/table/CamelFace.webp" alt="骆驼" title="骆驼"></a>
+                    </td>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/鸡" target="_blank"><img src="images/minecraft/table/ChickenFace.webp" alt="鸡" title="鸡"></a>
+                    </td>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/鳕鱼" target="_blank"><img src="images/minecraft/table/CodBody.webp" alt="鳕鱼" tilt="鳕鱼"></a>
+                    </td>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/牛" target="_blank"><img src="images/minecraft/table/CowFace.webp" alt="牛" title="牛"></a>
+                    </td>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/驴" target="_blank"><img src="images/minecraft/table/DonkeyFace.webp" alt="驴" title="驴"></a>
+                    </td>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/发光鱿鱼" target="_blank"><img src="images/minecraft/table/GlowSquidFace.webp" alt="发光鱿鱼" title="发光鱿鱼"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><strong>悦灵（Allay）</strong></p>
+                    </td>
+                    <td>
+                        <p><strong>犰狳（Armadillo）</strong></p>
+                    </td>
+                    <td>
+                        <p><strong style="white-space: pre-wrap;">蝙蝠
+（Bat）</strong></p>
+                    </td>
+                    <td>
+                        <p><strong>骆驼（Camel）</strong></p>
+                    </td>
+                    <td>
+                        <p><strong>鸡（Chicken）</strong></p>
+                    </td>
+                    <td>
+                        <p><strong style="white-space: pre-wrap;">鳕鱼
+（Cod）</strong></p>
+                    </td>
+                    <td>
+                        <p><strong style="white-space: pre-wrap;">牛
+（Cow）</strong></p>
+                    </td>
+                    <td>
+                        <p><strong>驴（Donkey）</strong></p>
+                    </td>
+                    <td>
+                        <p><strong>发光鱿鱼（Glow Squid）</strong></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/马" target="_blank"><img src="images/minecraft/table/HorseFace.webp" alt="马" title="马"></a>
+                    </td>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/骡" target="_blank"><img src="images/minecraft/table/MuleFace.webp" alt="骡" title="骡"></a>
+                    </td>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/嗅探兽" target="_blank"><img src="images/minecraft/table/SnifferFace.webp" alt="嗅探兽" title="嗅探兽"></a>
+                    </td>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/鲑鱼" target="_blank"><img src="images/minecraft/table/SalmonBody.webp" alt=" 鲑鱼" title="鲑鱼"></a>
+                    </td>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/绵羊" target="_blank"><img src="images/minecraft/table/SheepFace.png" alt="绵羊" title="绵羊"></a>
+                    </td>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/骷髅马" target="_blank"><img src="images/minecraft/table/SkeletonHorseFace.webp" alt="骷髅马" title="骷髅马"></a>
+                    </td>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/兔子" target="_blank"><img src="images/minecraft/table/RabbitFace.webp" alt="兔子" title="兔子"></a>
+                    </td>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/鹦鹉" target="_blank"><img src="images/minecraft/table/ParrotFace.webp" alt="鹦鹉" title="鹦鹉"></a>
+                    </td>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/乌龟" target="_blank"><img src="images/minecraft/table/TurtleFace.webp" alt="乌龟" title="乌龟"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><strong>马（Horse）</strong></p>
+                    </td>
+                    <td>
+                        <P><strong style="white-space: pre-wrap;">骡子
+（Mule）</strong></P>
+                    </td>
+                    <td>
+                        <p><strong>嗅探兽（Sniffer）</strong></p>
+                    </td>
+                    <td>
+                        <p><strong>鲑鱼（Salmon）</strong></p>
+                    </td>
+                    <td>
+                        <p><strong>绵羊（Sheep）</strong></p>
+                    </td>
+                    <td>
+                        <p><strong>骷髅马（Skeleton Horse）</strong></p>
+                    </td>
+                    <td>
+                        <p><strong>兔子（Rabbit）</strong></p>
+                    </td>
+                    <td>
+                        <p><strong>鹦鹉（Parrot）</strong></p>
+                    </td>
+                    <td>
+                        <p><strong>乌龟（Turtle）</strong></p>
+                    </td>
+                </tr>
+            </table>
+            <table border="1" style="text-align: center;table-layout: fixed;width: 100%;margin: 0 auto;">
+                <tr>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/流浪商人" target="_blank"><img src="images/minecraft/table/WanderingTraderFace.webp" alt="流浪商人" title="流浪商人"></a>
+                    </td>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/蝌蚪" target="_blank"><img src="images/minecraft/table/TadpoleFace.webp" alt="蝌蚪" title="蝌蚪"></a>
+                    </td>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/热带鱼" target="_blank"><img src="images/minecraft/table/TropicalFishBody.webp" alt="热带鱼" title="热带鱼"></a>
+                    </td>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/炽足兽" target="_blank"><img src="images/minecraft/table/StriderFace.webp" alt="炽足兽" title="炽足兽"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><strong>流浪商人
+（Wandering Trader）</strong></p>
+                    </td>
+                    <td>
+                        <p><strong>蝌蚪
+（Tadpole）</strong></p>
+                    </td>
+                    <td>
+                        <p><strong>热带鱼
+（Tropical Fish）</strong></p>
+                    </td>
+                    <td>
+                        <p><strong>炽足兽
+（Strider）</strong></p>
+                    </td>
+                </tr>
+            </table>
+            <table border="1" style="text-align: center;">
+                <tr>
+                    <td>
+                        <h4>无攻击行为，有伤害能力</h4>
+                    </td>
+                    <td>
+                        <p style="white-space: pre-wrap;">以下生物的行为会对包括玩家在内的生物造成伤害，但没有攻击行为。除河豚外，这一类型的生物受到伤害时会惊慌逃窜。</p>
+                    </td>
+                </tr>
+            </table>
+            <table border="1" style="text-align: center;margin: 0 auto;table-layout: fixed;width: 100%;">
+                <tr>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/山羊" target="_blank"><img src="images/minecraft/table/GoatFace.webp" alt="山羊" title="山羊"></a>
+                    </td>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/村民" target="_blank"><img src="images/minecraft/table/VillagerFace.webp" alt="村民" title="村民"></a>
+                    </td>
+                    <td>
+                        <a href="https://zh.minecraft.wiki/w/河豚"><img src="images/minecraft/table/PufferfishFace.png" alt="河豚" title="河豚"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><strong>山羊
+（Goat）</strong></p>
+                    </td>
+                    <td>
+                        <p><strong>村民
+（Villager）</strong></p>
+                    </td>
+                    <td>
+                        <p><strong>河豚
+（Pufferfish）</strong></p>
+                    </td>
+                </tr>
+                <table border="1" style="text-align: center;;">
+                    <tr>
+                        <td>
+                            <h4>有攻击行为，不攻击玩家</h4>
+                        </td>
+                        <td>
+                            <p style="white-space: pre-wrap;">以下生物拥有攻击能力，且会主动攻击生物，但均不会反击攻击它们的生物。这些生物不会主动攻击也不会反击玩家。除美西螈和雪傀儡外，这一类型的生物在受到伤害时仍会惊慌逃窜。</p>
+                        </td>
+                    </tr>
+                <table border="1" style="text-align: center;margin: 0 auto;table-layout: fixed;width: 100%;">
+                    <tr>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/美西螈" target="_blank"><img src="images/minecraft/table/AxolotlFace.webp" alt="美西螈" title="美西螈"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/雪傀儡" target="_blank"><img src="images/minecraft/table/SnowGolemFace.webp" alt="雪傀儡" title="雪傀儡"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/猫" target="_blank"><img src="images/minecraft/table/CatFace.webp" alt="猫" title="猫"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/青蛙" target="_blank"><img src="images/minecraft/table/FrogFace.webp" alt="青蛙" title="青蛙"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/豹猫" target="_blank"><img src="images/minecraft/table/OcelotFace.webp" alt="豹猫" title="豹猫"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><strong>美西螈
+（Axolotl）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>雪傀儡
+（Snow Golem）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>猫
+（Cat）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>青蛙
+（Frog）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>豹猫
+（Ocelot）</strong></p>
+                        </td>
+                    </tr>
+                </table>
+                <table border="1" style="text-align: center;">
+                    <tr>
+                        <td>
+                            <h4>条件敌对</h4>
+                        </td>
+                        <td>
+                            <p style="white-space: pre-wrap;">以下生物具有攻击能力和敌对条件，且能够在受到侵害时反击加害者，包括玩家。除狐狸外，对这一类型的生物的直接攻击造成伤害会引发反击。除羊驼和行商羊驼外，所有这一类型的生物都会持续攻击目标，直至其死亡、失踪或转化。 除狐狸、铁傀儡、羊驼和行商羊驼外，攻击这些生物会同时激怒其周围的所有同类生物。 由玩家建造的铁傀儡永远不会攻击玩家。</p>
+                        </td>
+                    </tr>
+                </table>
+                <table border="1" style="text-align: center;table-layout: fixed;width: 100%;">
+                    <tr>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/狼"><img src="images/minecraft/table/WolfFace.webp" alt="狼" title="狼"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/海豚" target="_blank"><img src="images/minecraft/table/DolphinFace.webp" alt="海豚" title="海豚"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/北极熊" target="_blank"><img src="images/minecraft/table/PolarBearFace.webp" alt="北极熊" title="北极熊"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/铁傀儡" target="_blank"><img src="images/minecraft/table/IronGolemFace.webp" alt="铁傀儡" title="铁傀儡"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/羊驼" target="_blank"><img src="images/minecraft/table/LlamaFace.webp" alt="羊驼" title="羊驼"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/熊猫" target="_blank"><img src="images/minecraft/table/PandaFace.webp" alt="熊猫" title="熊猫"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/行商羊驼" target="_blank"><img src="images/minecraft/table/TraderLlamaFace.webp" alt="行商羊驼" title="行商羊驼"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/蜜蜂" target="_blank"><img src="images/minecraft/table/BeeFace.webp" alt="蜜蜂" title="蜜蜂"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><strong>狼（Wolf）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>海豚（Dolphin）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>北极熊（Polar Bear）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>铁傀儡（Iron Golem）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>羊驼（Llama）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>熊猫（Panda）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>行商羊驼（Trader Llama）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>蜜蜂（Bee）</strong></p>
+                        </td>
+                    </tr>
+                <table border="1" style="text-align: center;">
+                    <tr>
+                        <td>
+                            <h4>敌对生物</h4>
+                        </td>
+                        <td>
+                            <p style="white-space: pre-wrap;">关于一种被称为“怪物”并使用默认玩家皮肤的已移除生物。敌对生物是危险而具有侵略性的生物。它们会尝试攻击玩家，尝试阻止玩家入睡，在一些情况下也会攻击其他生物或相互攻击。这些生物通常拥有不可忽视的杀伤能力，其中的部分生物也具有受难度影响的额外攻击方式。玩家杀死敌对生物通常有着高于玩家杀死友好生物的经验值奖励。铁傀儡、雪傀儡会主动攻击多数敌对生物。完整启动框架的激活的潮涌核心会攻击除猪灵、猪灵蛮兵和疣猪兽以外的[仅基岩版]所有敌对生物。在Java版中，拥有队伍的潜影贝会主动攻击除恶魂外的任何非同队敌对生物。除潜影贝、猪灵、疣猪兽、猪灵蛮兵[仅基岩版]和末影龙外，敌对生物都会在难度设置为和平时被激怒。进度“怪物猎人”要求玩家杀死任意一个除监守者外的敌对生物，“资深怪物猎人”要求玩家杀死每一种除监守者外的敌对生物各至少一次 以下生物只要注意到玩家，就会对玩家发动攻击，除非它们正在被其他优先目标占用（如反击攻击者）。除恶魂、疣猪兽、潜影贝、猪灵蛮兵[仅基岩版]、史莱姆和岩浆怪[仅Java版]以外，这些生物均会阻止附近的玩家使用床入睡。</p>
+                        </td>
+                    </tr>
+                </table>
+                <table border="1" style="text-align: center;table-layout: fixed;width: 100%;">
+                    <tr>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/烈焰人"><img src="images/minecraft/BlazeFace.webp" alt="烈焰人" title="烈焰人"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/僵尸" target="_blank"><img src="images/minecraft/ZombieFace.webp" alt="僵尸" title="僵尸"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/苦力怕" target="_blank"><img src="images/minecraft/CreeperFace.webp" alt="苦力怕" title="苦力怕"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/恶魂" target="_blank"><img src="images/minecraft/GhastFace.webp" alt="恶魂" title="恶魂"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/僵尸村民" target="_blank"><img src="images/minecraft/ZombieVillagerFace.webp" alt="僵尸村民" title="僵尸村民"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/守卫者" target="_blank"><img src="images/minecraft/GuardianFace.webp" alt="守卫者" title="守卫者"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/掠夺者" target="_blank"><img src="images/minecraft/PillagerFace.webp" alt="掠夺者" title="掠夺者"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/旋风人" target="_blank"><img src="images/minecraft/BreezeFace.webp" alt="旋风人" title="旋风人"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/末影螨" target="_blank"><img src="images/minecraft/EndermanFace.webp" alt="末影螨" title="末影螨"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><strong>烈焰人（Blaze）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>僵尸（Bogged）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>苦力怕（Creeper）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>恶魂（Ghast）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>僵尸村民（Zombie Villager）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>守卫者（Guardian）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>掠夺者（Pillager）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>旋风人（Breeze）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>末影螨（Enderman）</strong></p>
+                        </td>
+                    </tr>
+                </table>
+                <table border="1" style="text-align: center;table-layout: fixed;width: 100%;">
+                    <tr>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/唤魔者"><img src="images/minecraft/EvokerFace.webp" alt="唤魔者" title="唤魔者"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/卫道士" target="_blank"><img src="images/minecraft/VindicatorFace.webp" alt="卫道士" title="卫道士"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/僵尸尤猪兽" target="_blank"><img src="images/minecraft/ZoglinFace.webp" alt="僵尸尤猪兽" title="僵尸尤猪兽"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/潜影贝" target="_blank"><img src="images/minecraft/ShulkerFace.webp" alt="潜影贝" title="潜影贝"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/远古守卫者" target="_blank"><img src="images/minecraft/ElderGuardianFace.webp" alt="远古守卫者" title="远古守卫者"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/尤猪兽" target="_blank"><img src="images/minecraft/HoglinFace.webp" alt="尤猪兽" title="尤猪兽"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/尸壳" target="_blank"><img src="images/minecraft/HuskFace.webp" alt="尸壳" title="尸壳"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/岩浆怪" target="_blank"><img src="images/minecraft/MagmaCubeFace.webp" alt="岩浆怪" title="岩浆怪"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/幻翼" target="_blank"><img src="images/minecraft/PhantomFace.webp" alt="幻翼" title="幻翼"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><strong>唤魔者（Evoker）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>卫道士（Vindicator）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>僵尸尤猪兽（Zoglin）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>潜影贝（Shulker）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>远古守卫者（Elder Guardian）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>尤猪兽（Hoglin）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>尸壳（Husk）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>岩浆怪（Magma Cube）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>幻翼（Phantom）</strong></p>
+                        </td>
+                    </tr>
+                </table>
+                <table border="1" style="text-align: center;table-layout: fixed;width: 100%;">
+                    <tr>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/猪灵蛮兵"><img src="images/minecraft/PiglinBruteFace.webp" alt="猪灵蛮兵" title="猪灵蛮兵"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/女巫"><img src="images/minecraft/WitchFace.webp" alt="女巫" title="女巫"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/劫掠兽" target="_blank"><img src="images/minecraft/RavagerFace.webp" alt="劫掠兽" title="劫掠兽"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/蠹虫" target="_blank"><img src="images/minecraft/SilverfishFace.webp" alt="蠹虫" title="蠹虫"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/骷髅" target="_blank"><img src="images/minecraft/SkeletonFace.webp" alt="骷髅" title="骷髅"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/流浪者" target="_blank"><img src="images/minecraft/StrayFace.webp" alt="流浪者" title="流浪者"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/恼鬼" target="_blank"><img src="images/minecraft/VexFace.webp" alt="恼鬼" title="恼鬼"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/监守者" target="_blank"><img src="images/minecraft/WardenFace.webp" alt="监守者" title="监守者"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/凋灵骷髅" target="_blank"><img src="images/minecraft/WitherSkeletonFace.webp" alt="凋灵骷髅" title="凋灵骷髅"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><strong>猪灵蛮兵（Piglin Brute）</strong></p>
+                        </td>
+                        <td> 
+                            <p><strong>女巫（Witch）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>劫掠兽（Ravager）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>蠹虫（Silverfish）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>骷髅（Skeleton）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>流浪者（Stray）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>恼鬼（Vex）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>监守者（Warden）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>凋灵骷髅（Wither Skeleton）</strong></p>
+                        </td>
+                    </tr>
+                </table>
+                <table border="1" style="text-align: center;">
+                    <tr>
+                        <td>
+                            <h4>条件敌对</h4>
+                        </td>
+                        <td>
+                            <p style="white-space: pre-wrap;">以下生物可以通过满足特定的条件使其即使注意到玩家也不会发动攻击、部分可以通过满足特定的条件使其不会阻止玩家入睡。</p>
+                        </td>
+                    </tr>
+                </table>
+                <table border="1" style="text-align: center;table-layout: fixed;width: 100%;">
+                    <tr>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/嘎枝" target="_blank"><img src="images/minecraft/CreakingFace.webp" alt="嘎枝" title="嘎枝"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/洞穴蜘蛛" target="_blank"><img src="images/minecraft/CaveSpiderFace.webp" alt="洞穴蜘蛛" title="洞穴蜘蛛"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/溺尸" target="_blank"><img src="images/minecraft/DrownedFace.webp" alt="溺尸" title="溺尸"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/末影人" target="_blank"><img src="images/minecraft/EndermanFace.webp" alt="末影人" title="末影人"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/猪灵" target="_blank"><img src="images/minecraft/PiglinFace.png" alt="猪灵" title="猪灵"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/蜘蛛" target="_blank"><img src="images/minecraft/SpiderFace.webp" alt="蜘蛛" title="蜘蛛"></a>
+                        </td>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/僵尸猪灵" target="_blank"><img src="images/minecraft/ZombifiedPiglinFace.webp" alt="僵尸猪灵" title="僵尸猪灵"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><strong>嘎枝（Creaking）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>洞穴蜘蛛（Cave Spider）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>溺尸（Drowned）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>末影人（Enderman）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>猪灵（Piglin）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>蜘蛛（Spider）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>僵尸猪灵（Zombified Piglin）</strong></p>
+                        </td>
+                    </tr>
+                </table>
+                <table border="1" style="text-align: center;">
+                    <tr>
+                        <td>
+                            <h4>Boss生物</h4>
+                        </td>
+                        <td>
+                            <p style="white-space: pre-wrap;">Boss生物是拥有多种攻击手段、坚韧且极具破坏性、始终敌对的敌对生物，为玩家提供更长期、更危险和更大规模的战斗，它们免疫所有状态效果[仅Java版]，并且有与其相关的Boss栏显示其生命值。其中末影龙不会阻止玩家入睡。</p>
+                        </td>
+                    </tr>
+                </table>
+                <table border="1" style="text-align: center; margin: 0 auto;">
+                    <tr>
+                        <td>
+                            <a href="https://zh.minecraft.wiki/w/末影龙" target="_blank"><img src="images/minecraft/EnderdragonFace.webp" alt="末影龙" title="末影龙"></a>
+                        </td>
+                        <td>
+                            <span style="white-space: pre-wrap;"></span><a href="https://zh.minecraft.wiki/w/凋灵" target="_blank"><img src="images/minecraft/WitherFace.webp" alt="凋灵" title="凋灵"><span style="white-space: pre-wrap;"></span></a>                  </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><strong>末影龙（Ender Dragon）</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>凋灵（Wither）  </strong></p>
+                        </td>
+                    </tr>
+                </table>
+                </table>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <footer id="footer"></footer><br>
+        <h1 style="text-align: center;">本站所有内容均摘自<a href="https://zh.minecraft.wiki/" target="_blank" style="color: rgb(134, 134, 134);text-decoration: none;">Minecraft Wiki</a>，仅供学习交流使用，请勿用于商业用途！</h1>
+    </div>
+    <audio src="audio/Aerie.mp3" autoplay></audio>
+</body>
+</html>

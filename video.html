@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft视频</title>
+    <link rel="icon" type="image/x-icon" href="images/icon/link.png">
+    <style>
+        @font-face {
+        font-family: "minecraft_font";
+        src: url(font/minecraft_font.ttf);
+        }
+        body {
+            background:url(images/background/background4.png);
+            background-repeat:no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            font-family: "minecraft_font";
+            word-wrap: break-word;
+        }
+        div[id="home"] {
+            width: 65%;
+            flex-wrap: 1;
+            border: 50px solid transparent;
+            border-image: url(images/background/book.png) 100 fill;
+            background-repeat: no-repeat;
+            background-size: contain;
+            image-rendering: pixelated;
+            margin: 0px auto;
+        }
+        div[id="title"] {
+            text-align: center;
+        }
+        h1[id="title"] {
+            position: relative;
+            top: 10px;
+            font-size: 50px;
+        }
+        h1[id="subtitle"] {
+            position: relative;
+            top: 10px;
+            font-size: 20px;
+        }
+        hr[id="1"] {
+            background-color: black;
+            width: 100%;
+            height: 3px;
+            border: none;
+        }
+        hr[id="2"] {
+            background-color: black;
+            width: 100%;
+            height: 2px;
+            border: none;
+        }
+        hr[id="3"] {
+            background-color: black;
+            width: 100%;
+            height: 1px;
+            border: none;
+        }
+        div[id="content"] {
+            position: relative;
+            width: 80%;
+            top: 50px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 50px solid transparent;
+            border-image: url(images/background/background.png) 60 fill;
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0 auto;
+        }
+        #back{
+            width: 300px;
+            height: 30px;
+            background-image: url(images/icon/button.png);
+            background-size: 100% 100%;
+            border-color: rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+            margin: 0 20px;
+            background-repeat: no-repeat;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            position: relative;
+            margin: 0 auto;
+            top:20px
+        }
+        #back:hover{
+            background-image: url(images/icon/button_highlighted.png);
+            background-size: 100% 100%;
+        }
+        hr{
+            margin: 20px 0;
+        }
+        p{
+            line-height: 1.5;
+        }
+        #introduction{
+            white-space: pre-wrap;
+        }
+        .comment-section {
+            width: 100%;
+            height: 200px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        #submit-comment {
+            width: 20%;
+            height: 30px;
+            float: left;
+            background-image: url(images/icon/button.png);
+            background-size: 100% 100%;
+            border-color: rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+            background-repeat: no-repeat;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            position: relative;
+            margin: 0 auto;
+            top:20px
+        }
+        #submit-comment:hover{
+            background-image: url(images/icon/button_highlighted.png);
+            background-size: 100% 100%;
+        }
+        textarea {
+            width: 98%;
+            height: 50px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        a{
+            transition: transform 0.3s ease;
+        }
+        a:hover{
+            transform: scale(1.1);
+        }
+        #footer {
+            margin: 40px;
+            padding-top: 200px;
+            background: url(images/title/Minecraft_Wiki_header.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="home">
+        <div id="title">
+            <h1 id="title" id="top">Minecraft Video</h1>
+            <h1 id="subtitle">Minecraft 视频</h1>
+            <a href="homepage.html" id="back">返回Minecraft Wiki首页</a>
+            <br>
+            <br>
+            <marquee behavior="scroll" direction="left" scrollamount="5">
+                本站并未完全搭建好处于测试阶段，部分功能不可用，敬请谅解！
+            </marquee>
+        </div>
+        <div id="content">
+            <h2>Minecraft 1.21更新《Tricky Trials》宣传视频</h2>
+            <video src="video/Tricky Trials.mp4" controls="controls" width="100%" height="100%"></video>
+            <p id="introduction">棘巧试炼（Tricky Trials）是一次主要更新，发布于2024年6月13日。此次更新在Minecraft Live 2023期间宣布，更新的名称于2024年4月26日的Minecraft Monthly上公布。
+在Java版上，此次更新的开发始于1.20.3的快照23w42a，其发布于2023年10月18日。
+在基岩版上，此次更新开发始于基岩版1.20.50.21，其发布于2023年10月18日。</p>
+        <div class="comment-section">
+            <h2>评论区</h2>
+            <div id="comments"></div>
+            <textarea id="comment-input" placeholder="请输入评论..."></textarea>
+            <br>
+            <button id="submit-comment">提交评论</button>
+        </div>
+            <hr>
+            <h2>Minecraft中国版宣传视频</h2>
+            <video src="video/china.mp4" controls="controls" width="100%" height="100%"></video>
+            <p id="introduction">我的世界：中国版（Minecraft: China Edition），官方表述为《我的世界》中国版，是Minecraft Java版和基岩版的中国本地化版本，由Mojang Studios、Xbox Game Studios和网易联合开发。截至2023年9月27日已有7亿注册用户。</p>
+        <div class="comment-section">
+            <h2>评论区</h2>
+            <div id="comments"></div>
+            <textarea id="comment-input" placeholder="请输入评论..."></textarea>
+            <br>
+            <button id="submit-comment">提交评论</button>
+        </div>
+            <hr>
+            <h2>Minecraft 熊猫更新宣传视频</h2>
+            <video src="video/cat.mp4" controls="controls" width="100%" height="100%"></video>
+            <p id="introduction">熊猫较为罕见地生成于丛林及其变种生物群系中，其中在竹林的生成频率最高。类似于一些友好生物，熊猫会生成在上方至少有两格方块空间、光照等级不低于9的草方块上，但是比其他的丛林生物更稀有。熊猫在自然生成时会带有随机的“变种”，其中普通变种最为常见，棕色的最为罕见。</p>
+        <div class="comment-section">
+            <h2>评论区</h2>
+            <div id="comments"></div>
+            <textarea id="comment-input" placeholder="请输入评论..."></textarea>
+            <br>
+            <button id="submit-comment">提交评论</button>
+        </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <footer id="footer"></footer><br>
+        <h1 style="text-align: center;">本站所有内容均摘自<a href="https://zh.minecraft.wiki/" target="_blank" style="color: rgb(134, 134, 134);text-decoration: none;">Minecraft Wiki</a>，仅供学习交流使用，请勿用于商业用途！</h1>
+    </div>
+</body>
+</html>

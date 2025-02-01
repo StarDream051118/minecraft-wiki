@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="icon" type="image/x-icon" href="images/icon/link.png">
+    <style>
+        @font-face {
+            font-family: "minecraft_font";
+            src: url(font/minecraft_font.ttf);
+            }
+        body{
+            background:url(images/background/background_regiser.png) no-repeat top center;color: rgba(255, 255, 255, 0.59);
+            background-size: cover;
+            font-family: "minecraft_font";
+        }
+        #header {
+            padding-top: 200px;
+            background: url(images/title/Minecraft_Wiki_header.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            position: relative;
+            top: 80px;
+        }
+        p{
+            text-align: center;
+            font-family: "minecraft_font";
+        }
+        form{
+            width: 420px;
+            height: 255px;
+            padding-top: 10px;
+            margin: 180px auto;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 50px solid transparent;
+            border-image: url(images/background/background.png) 60 fill;
+            border-radius: 20px;
+        }
+        input{
+            border-radius: 5px;
+            border-color: rgba(255, 255, 255, 0.3);
+            padding: 2px;
+        }
+        input[type="username"]{
+            background:url(images/user.png) no-repeat 5px center rgba(255, 255, 255, 0.3);
+        }
+        input[type="password"]{
+            background:url(images/password.png) no-repeat 5px center rgba(255,255,255, 0.3);
+        }
+        #login{
+            width: 120px;
+            background-image: url(images/icon/button.png);
+            background-size: 100% 100%;
+            border-color: rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+            position: relative;
+            margin: 0 150px;
+            color:rgb(255, 255, 255, 0.8);
+        }
+        #login:hover{
+            background-image: url(images/icon/button_highlighted.png);
+            background-size: 100% 100%;
+        }
+        a{
+            text-decoration: none;
+            color:rgb(255, 255, 255, 0.8);
+            transition: color 0.3s ease;
+        }
+        a:hover{
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <a href="homepage.html"><div id="header"></div></a>
+    <form action="login.php" method="post" novalidate>
+        <h2 style="text-align: center;">欢迎来到Minecraft Wiki!</h2>
+        <p>登录或注册账号以填写问卷！</p>
+        <p>账号：<input type="username" name="account" required></p>
+        <p>密码：<input type="password" name="password" required></p>
+        <input type="submit" name="login" id=login value="登录">
+        <br>
+        <br>
+        <p style="text-align:center;">还没有Minecraft Wiki账号？<a href="sign_in.html">点此注册</a></p>
+    </form>
+</body>
+</html>

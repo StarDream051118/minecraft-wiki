@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="icon" type="image/x-icon" href="images/icon/link.png">
+    <style>
+        @font-face {
+            font-family: "minecraft_font";
+            src: url(font/minecraft_font.ttf);
+            }
+        body{
+            background:url(images/background/background_regiser.png) no-repeat top center;color: rgba(255, 255, 255, 0.59);
+            background-size: cover;
+            font-family: "minecraft_font";
+        }
+        #header {
+            padding-top: 200px;
+            background: url(images/title/Minecraft_Wiki_header.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            position: relative;
+            top: 80px;
+        }
+        p{
+            text-align: center;
+        }
+        form{
+            width: 420px;
+            height: 350px;
+            padding-top: 10px;
+            margin: 180px auto;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 50px solid transparent;
+            border-image: url(images/background/background.png) 60 fill;
+            border-radius: 20px;
+        }
+        input{
+            border-radius: 5px;
+            border-color: rgba(255, 255, 255, 0.3);
+            padding: 2px;
+        }
+        input[type="text"]{
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        input[type="password"]{
+            background-color: rgba(255,255,255, 0.3);
+        }
+        input[type="email"]{
+            background-color: rgba(255,255,255, 0.3);
+        }
+        #register{
+            width: 120px;
+            background-image: url(images/icon/button.png);
+            background-size: 100% 100%;
+            border-color: rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+            color:rgb(255, 255, 255, 0.8);
+            position: relative;
+            font-family: minecraft_font;
+            margin: 0 150px;
+        }
+        #register:hover{
+            background-image: url(images/icon/button_highlighted.png);
+            background-size: 100% 100%;
+        }
+        a{
+            text-decoration: none;
+            color:rgb(255, 255, 255, 0.8);
+            transition: color 0.3s ease;
+        }
+        a:hover{
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <a href="homepage.html"><div id="header"></div></a>
+    <form action="register.php" method="post" novalidate>
+        <h2 style="text-align: center;">欢迎来到Minecraft Wiki!</h2>
+        <p>注册账号以填写问卷！</p>
+        <p style="right: 8px;position: relative;">用户名：<input type="text" name="username" placeholder="请输入用户名" required></p>
+        <p>账号：<input type="text" name="account" placeholder="请输入账号(字母or数字)" required></p>
+        <p>密码：<input type="password" name="password" placeholder="请输入至少8位的密码" required></p>
+        <p style="right: 31px;position: relative;">再次输入密码：<input type="password" name="password_again" placeholder="请再次输入密码" required></p>
+        <p>邮箱：<input type="email" name="email" placeholder="请输入邮箱地址" required></p>
+        <input type="submit" name="register" value="注册" id="register">
+        <p>已有Minecraft Wiki账号？<a href="log_in.html" style="text-decoration: none;">点此登录！</a></p>
+    </form>
+</body>
+</html>
